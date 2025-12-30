@@ -1,0 +1,5 @@
+lancer ollama logiciel dans pc 
+lancer CMD + commande : ollama run codellama:7b-instruct-q4_0
+lancer dans terminal 1 : streamlit run main.py
+lancer dans navigateur : http://localhost:11434/ -> pour savoir est ce que ollama is running
+
