@@ -10,8 +10,12 @@ import requests
 import json
 
 class CodeLlamaClient:
-    def __init__(self, api_url="http://localhost:11434/api/generate", model="codellama"):
-        """Initialise le client avec l'URL de l'API Ollama et le modèle par défaut."""
+    # def __init__(self, api_url="http://localhost:11434/api/generate", model="codellama"):
+    #     """Initialise le client avec l'URL de l'API Ollama et le modèle par défaut."""
+    #     self.api_url = api_url
+    #     self.model = model
+
+    def __init__(self, api_url="http://ollama:11434/api/generate", model="codellama:7b-instruct-q4_0"):
         self.api_url = api_url
         self.model = model
 

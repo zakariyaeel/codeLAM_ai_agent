@@ -1,0 +1,24 @@
+services:
+  # The Ollama backend service
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_backend
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_storage:/root/.ollama
+
+  # Your Streamlit application service
+  streamlit-app:
+    build: .
+    container_name: projet_ia_ui
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - OLLAMA_API_URL=http://ollama:11434/api/generate
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_storage:
