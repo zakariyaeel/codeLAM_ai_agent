@@ -52,3 +52,15 @@ python main.py
 - Support d'autres langages de programmation
 - Amélioration de l'interface utilisateur
 - Intégration d'un système de logs plus complet
+
+
+## Docker instructions : 
+-Suivez ces commandes : 
+ **Démarrer l'aplication**
+    ```bash
+        docker compose up -d
+    ```
+**Installer ollama model dans docker**
+    ```bash
+        docker exec -it ollama_backend ollama pull codellama:7b-instruct-q4_0
+    ```
